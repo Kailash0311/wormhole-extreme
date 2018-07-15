@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Wormhole Extreme Three.js Experiment</title>
+    <title>Atmos</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="IE=Edge" />
@@ -13,13 +13,19 @@
 
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link type="text/css" rel="stylesheet" href="dist/css/bundle.min.css" />
-
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Forum" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+    
 </head>
 <body>
 
     <div class="loader active"></div>
 
-    <div class="stats center animated zoomInDown" style="display: none"></div>
+    <!-- Deleting the below element was stoping the background effect  -->
+    <div class="stats center animated zoomInDown" style="display: none ; visibility: hidden;"></div>
+
 
     <div class="container error center fadeIn" style="display: none">
         <span class="error-icon icon-error"></span>
@@ -29,22 +35,24 @@
     </div>
 
     <div class="container content center animated fadeIn" style="display: none">
-        <h1><i>Wormhole Extreme</i></h1>
-        <p>An experimental interactive space scene rendered on the browser using WebGL and Three.js with Javascript.</p>
+        <h1><i style = "font-family: 'Galada', cursive !important; font-size: 92px;">ATMOS</i></h1>
+        
+        <p style="font-family: 'Forum', cursive !important; letter-spacing: 1em;"  >INTO THE SIXTH DIMESION</p>
+        <h3><i style="letter-spacing: 0.5em;">26-28 OCTOBER</i></h3>
+        <br><hr>
         <button id="hyper-btn" class="btn icon-rocket icon-trim" type="button"><span>Hyper Travel</span></button>
+        
     </div>
 
     <div class="share center animated zoomInUp" style="display: none">
-        <a class="btn icon-twitter icon-trim" data-share="twitter" href="#"><span>Tweet</span></a> &nbsp;
-        <a class="btn icon-facebook icon-trim" data-share="facebook"  href="#"><span>Share</span></a> &nbsp;
-        <a class="btn icon-reddit icon-trim" data-share="reddit"  href="#"><span>Post</span></a> &nbsp;
-        <a class="btn icon-github icon-trim" href="https://github.com/rainner/wormhole-extreme" target="_blank"><span>Fork</span></a>
+        <a class="btn icon-twitter icon-trim" data-share="twitter" href="https://twitter.com/BITSAtmos"><span>Tweet</span></a> &nbsp;
+        <a class="btn icon-facebook icon-trim" data-share="facebook"  href="https://www.facebook.com/bits.atmos"><span>Share</span></a> &nbsp;
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
     <script src="dist/js/polyfills.js"></script>
     <script src="dist/js/bundle.min.js"></script>
     <script src="dist/js/app.js"></script>
-
+   
 </body>
 </html>
