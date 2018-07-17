@@ -45,13 +45,21 @@ body {
 /**
  * Links
  */
+
+  .events-download-link {
+     color: white !important;
+     letter-spacing: 0.25em !important;
+ }
+ .events-download-link:hover{
+    text-decoration: underline !important; 
+}
 a,
 a:active,
 a.visited {
-    color: #004499;
+    color: white !important;
 
     &:hover {
-        color: #003366;
+        text-decoration: underline !important;
     }
 }
 

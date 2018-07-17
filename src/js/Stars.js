@@ -100,7 +100,8 @@
                 this.group.rotation.y += ( this.look.y - this.group.rotation.y ) / this.ease;
                 this.group.rotation.z += ( this.look.z - this.group.rotation.z ) / this.ease;
 
-                this.look.z -= 0.0008; // keep it spinning
+                this.look.x += 0.0008; // keep it spinning
+                
             }
         },
 

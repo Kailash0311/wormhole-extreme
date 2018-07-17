@@ -52,7 +52,7 @@
             this.camera   = new THREE.PerspectiveCamera( 60, Device.screenInfo().ratio, 0.1, 20000 );
             this.light    = new THREE.SpotLight( 0xffffff, 1, 3000, 0.4, 0.5, 1 );
             this.scene    = new THREE.Scene();
-
+            
             this.renderer.setPixelRatio( window.devicePixelRatio );
             this.renderer.setClearColor( 0x000000, 0 );
             this.renderer.sortObjects = true;

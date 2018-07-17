@@ -58,7 +58,7 @@
         onFrame: function( stage, now )
         {
             if( this.ready )
-            {
+            {         
                 if( this.hyper )
                 {
                     this.hype.slow  = ( this.hype.slow >= this.hype.speed ) ? this.hype.speed : this.hype.slow * this.hype.upRatio;
@@ -123,6 +123,7 @@
         // start hyper travel
         hyperStart: function( stage )
         {
+            console.log("Hyper started ! ")
             stage.addToScene( this.group );
             this.hyper = true;
         },
@@ -130,6 +131,7 @@
         // start hyper travel
         hyperStop: function( stage )
         {
+            console.log("Hyper Stopped ! ")
             stage.removeFromScene( this.group );
             this.hyper = false;
         },

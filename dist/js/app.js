@@ -12,6 +12,7 @@
         stats     = document.querySelector( ".stats" ),
         hyperBtn  = document.getElementById( "hyper-btn" ),
         shareBtns = document.querySelectorAll( "[data-share]" ) || [];
+        eventsBtn   = document.querySelector( ".events" )
 
     // setup main stage
     var stage = new Stage( "stage-container", {
@@ -60,6 +61,15 @@
 
         }, 2500 );
     });
+    eventsBtn.addEventListener( "click", function(){
+
+        content.classList.remove("active")
+        events.classList.add("active");
+
+
+    })
+
+
 
     // zoom in on press
     stage.onEvent( "onPress", function( mouse )

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Atmos</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" id="description" content="An interactive #space scene rendered on the #browser using #WebGL and #ThreeJS by @raintek_" />
+    <meta name="author" content="Rainner Lins | @raintek_ | http://rainnerlins.com | https://github.com/rainner" />
+    <meta name="copyright" content="&copy; All Rights Reserved - 2016" />
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="dist/css/bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Forum" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+        
+</head>
+<body>
+
+    <div class="loader active"></div>
+
+    <!-- Deleting the below element was stoping the background effect  -->
+    <div class="stats center animated zoomInDown" style="display: none ; visibility: hidden;"></div>
+
+
+    <div class="container error center fadeIn" style="display: none">
+        <span class="error-icon icon-error"></span>
+        <h1 class="error-title">Oops, there's a problem.</h1>
+        <p class="error-info"></p>
+        <button type="button" class="icon-rocket" onclick="top.location.reload( true )">Try again</button>
+    </div>
+
+    <div class="container content events  animated fadeIn " style="display: none ; margin-left: 12%;">
+        <h1><i style = "font-family: 'Galada', cursive !important; font-size: 45px;">Events</i></h1>
+    </div>
+   
+    <button id="hyper-btn" class="btn icon-rocket icon-trim" type="button" style="display: none;"><span>Hyper Travel</span></button>
+    <div class="events center" style="position: absolute; left: 25px; top: 25px;">
+        
+        <a href="/index.html" style="color: azure;" > HOME </a>
+        
+    </div>
+    <div  class = "event-list" style="float:left; position: relative; margin-left: 15%; margin-top: 15%;">
+        
+            <a href="src/Events/Tech Expo-2018.pdf" download="" class="events-download-link"> Tech Expo 2018</a><br>
+            <a href="src/Events/Time versus Physics.pdf" download="" class="events-download-link">Time v/s Physics</a><br>
+            <a href="src/Events/Suit-Up.pdf" download="" class="events-download-link"> Suit Up ! </a><br>
+            <a href="src/Events/SciTech Quiz.pdf" download="" class="events-download-link"> Sci-Tech Quiz</a><br>
+            <a href="src/Events/RoboWars.pdf" download="" class="events-download-link"> RoboWars</a><br>
+            <a href="src/Events/Prodigal Designer.pdf" download="" class="events-download-link"> Prodigal Designer</a><br>
+            <a href="src/Events/Nostrum Vitae.pdf" download="" class="events-download-link"> Nostrum Vitae</a><br>
+            <a href="src/Events/N-Crypton.pdf" download="" class="events-download-link"> N-Crypton</a><br>
+            <a href="src/Events/miniGP-draft.docx.pdf" download="" class="events-download-link"> Mini-GP</a><br>
+            <a href="src/Events/MIDNIGHT AV QUIZ.pdf" download="" class="events-download-link"> Midnight AV Quiz</a><br>
+            <a href="src/Events/Manager's dilemma.pdf" download="" class="events-download-link">Manager's dilemma</a><br>
+            <a href="src/Events/Law Follower.pdf" download="" class="events-download-link"> Law Follower</a><br>
+
+        
+    </div>
+    <div class = "event-list" style="float: right;; position: relative; margin-right: 15%; margin-top: 15%; margin-bottom: 25%;">
+        
+            <a href="src/Events/GameOfDrones ATMOS'18.pdf" download="" class="events-download-link">Game Of Drones</a><br>
+            <a href="src/Events/Cubing-Atmosphere-Rules.pdf" download="" class="events-download-link">Cubing-Atmosphere</a><br>
+            <a href="src/Events/CourtRoom.pdf" download="" class="events-download-link">CourtRoom</a><br>
+            <a href="src/Events/codejam_problem_statement.pdf" download="" class="events-download-link">CodeJam</a><br>
+            <a href="src/Events/CODE GOLF.pdf" download="" class="events-download-link"> Code Golf</a><br>
+            <a href="src/Events/capture the flag_problem_statement.pdf" download="" class="events-download-link">Capture The Flag</a><br>
+            <a href="src/Events/beam it draft 2018.pdf" download="" class="events-download-link"> Beam it ! </a><br>
+            <a href="src/Events/ARC Competition for ATMOS 2018.pdf" download="Predestination" class="events-download-link">Predestination</a><br>
+            <a href="src/Events/Anatomy Of Murder.pdf" download="" class="events-download-link">Anatomy Of Murder</a><br>
+            <a href="src/Events/ALGOMANIAC.pdf" download="" class="events-download-link">ALGOMANIAC</a><br>
+            <a href="src/Events/Alchemy ATMOS Event .pdf" download="Snitch In Time" class="events-download-link">Snitch In Time </a><br>
+            <a href="src/Events/Tech Expo-2018.pdf" download="" class="events-download-link">Un-named</a><br>
+            
+        
+    </div>
+    <div class="share center animated zoomInUp" style="display: none">
+        <a class="btn icon-twitter icon-trim" data-share="twitter" href="https://twitter.com/BITSAtmos"><span>Tweet</span></a> &nbsp;
+        <a class="btn icon-facebook icon-trim" data-share="facebook"  href="https://www.facebook.com/bits.atmos"><span>Share</span></a> &nbsp;
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+    <script src="dist/js/polyfills.js"></script>
+
+    <script src="src/js/Device.js"></script>
+    <script src="src/js/Nebula.js"></script>
+    <script src="src/js/Planets.js"></script>
+    <script src="src/js/Stage.js"></script>
+    <script src="src/js/Stars.js"></script>
+    <script src="src/js/Wormhole.js"></script>
+    <script src="dist/js/app.js"></script>
+   
+</body>
+</html>
