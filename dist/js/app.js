@@ -11,8 +11,9 @@
         share     = document.querySelector( ".share" ),
         stats     = document.querySelector( ".stats" ),
         hyperBtn  = document.getElementById( "hyper-btn" ),
-        shareBtns = document.querySelectorAll( "[data-share]" ) || [];
-        eventsBtn   = document.querySelector( ".events" )
+        homeBtn = document.getElementById("home"),
+        shareBtns = document.querySelectorAll( "[data-share]" ) || [],
+        events   = document.querySelector( ".events" );
 
     // setup main stage
     var stage = new Stage( "stage-container", {
@@ -56,18 +57,33 @@
 
         setTimeout( function()
         {
+            events.classList.add( "active" );
+            stage.triggerEvent( "hyperStop" );
+
+        }, 2500 );
+    });
+
+    homeBtn.addEventListener( "click", function()
+    {
+        events.classList.remove( "active" );
+        stage.triggerEvent( "hyperStart" );
+
+        setTimeout( function()
+        {
             content.classList.add( "active" );
             stage.triggerEvent( "hyperStop" );
 
         }, 2500 );
     });
-    eventsBtn.addEventListener( "click", function(){
+    // eventsBtn.addEventListener( "click", function(){
 
-        content.classList.remove("active")
-        events.classList.add("active");
+    //     content.classList.remove("active");
+    //     stage.triggerEvent("hyperStart");
+    //   	window.location.replace('file:///E:/wormhole-extreme/events.html');
+    //     events.classList.add("active");
 
 
-    })
+    // })
 
 
 
